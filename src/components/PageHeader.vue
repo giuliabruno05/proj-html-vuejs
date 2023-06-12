@@ -4,6 +4,9 @@ export default {
     name: "PageHeader",
     components: {
         AppSlider,
+    },
+    props: {
+        details: Array
     }
 }
 </script>
@@ -16,23 +19,21 @@ export default {
             </div>
             <nav>
                 <ul>
-                    <li>HOME</li>
-                    <li>PAGES</li>
-                    <li>MENU</li>
-                    <li>
-                        <div class="logo">
-                            <img src="/img/h5-logo-divided-header.png" alt="">
-                        </div>
+                    <li v-for="link in details">
+                        {{ link.text }}
                     </li>
-                    <li>EVENT</li>
-                    <li>BLOG</li>
-                    <li>LANDING</li>
                 </ul>
             </nav>
             <div class="shop">
                 <ul>
-                    <li>CART</li>
-                    <li>SEARCH</li>
+                    <li class="pay">
+                        <img src="/svg/svg-1.svg" alt="">
+                        CART
+                    </li>
+                    <li>
+                        <i class="fa-solid fa-magnifying-glass fa-rotate-90"></i>
+                        SEARCH
+                    </li>
                 </ul>
             </div>
         </div>
@@ -76,6 +77,17 @@ header {
         .logo {
             width: 80px;
         }
+    }
+
+    .pay {
+        display: flex;
+        align-items: center;
+        gap: 5px;
+    }
+
+    .pay img {
+        width: 30px;
+
     }
 }
 </style>

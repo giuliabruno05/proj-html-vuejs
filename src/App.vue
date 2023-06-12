@@ -8,12 +8,46 @@ export default {
     PageMain,
     PageFooter
 
+  },
+  data() {
+    return {
+      links: [
+        {
+          text: "HOME",
+          url: "#"
+        },
+        {
+          text: "PAGES",
+          url: "#"
+        },
+        {
+          text: "MENU",
+          url: "#"
+        },
+        {
+          text: "/img/h5-logo-divided-header.png",
+          url: "#"
+        },
+        {
+          text: "EVENT",
+          url: "#"
+        },
+        {
+          text: "BLOG",
+          url: "#"
+        },
+        {
+          text: "LANDING",
+          url: "#"
+        }
+      ]
+    }
   }
 }
 </script>
 
 <template>
-  <PageHeader />
+  <PageHeader :details="links" />
   <PageMain />
   <PageFooter />
 </template>
