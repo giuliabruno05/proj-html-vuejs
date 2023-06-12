@@ -12,9 +12,12 @@ export default {
 }
 </script>
 
-<template></template>
+<template>
+  <PageHeader />
+  <PageMain />
+  <PageFooter />
+</template>
 
 <style lang="scss">
-@use './styles/variables.scss' as *;
 @use './styles/general.scss' as *;
 </style>
