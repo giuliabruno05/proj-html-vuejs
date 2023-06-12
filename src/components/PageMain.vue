@@ -20,6 +20,7 @@ export default {
                 <img src="/img/h3-img-4.jpg" alt="">
             </div>
         </div>
+        <!-- sezione slogan -->
         <section class="slogan">
             <div class="btn prev">
                 <span>PREV</span>
@@ -36,6 +37,7 @@ export default {
             <div class="icon-pizza">
                 <img src="/svg/svg-4.svg" alt="">
             </div>
+            <!-- sezione combo special  -->
         </section>
         <section class="special">
             <div class="special-image">
@@ -43,11 +45,62 @@ export default {
             </div>
             <div class="combo">
                 <div class="text-combo">
-                    <h3>SPECIALS *</h3>
+                    <h2>SPECIALS *</h2>
                     <span class="lorem">Lorem ipsum dolor sit amet consectetur adipisicing elit.Praesent ut</span>
-                    <span></span>
+                    <ul>
+                        <li>
+                            <span class="price">
+                                <i class="fa-solid fa-dollar-sign">
+                                </i>
+                                10
+                            </span>
+                            <strong>COMBO PICCOLO</strong>
+                        </li>
+                        <li class="lorem list">Lorem ipsum dolor sit amet consectetur adipisicing elit.Praesent ut aliquam
+                            dui.
+                        </li>
+                        <li>
+                            <span class="price">
+                                <i class="fa-solid fa-dollar-sign">
+                                </i>
+                                20
+                            </span>
+                            <strong>COMBO MEZZO</strong>
+                        </li>
+                        <li class="lorem list">Lorem ipsum dolor sit amet consectetur adipisicing elit.Praesent ut aliquam
+                            dui.
+                        </li>
+                        <li>
+                            <span class="price">
+                                <i class="fa-solid fa-dollar-sign">
+                                </i>
+                                30
+                            </span>
+                            <strong>COMBO GRANDE</strong>
+                        </li>
+                        <li class="lorem list">Lorem ipsum dolor sit amet consectetur adipisicing elit.Praesent ut aliquam
+                            dui.
+                        </li>
+
+                    </ul>
+                </div>
+                <div class="icon-pizza">
+                    <img src="/svg/svg-4.svg" alt="">
                 </div>
             </div>
+        </section>
+        <!-- sezione bg repeat -->
+        <section class="bg-repeat">
+            <div class="bg top"></div>
+            <div class="bg middle">
+                <div class="text-middle">
+                    GO AHEAD AND BUILD YOUR OWN PIZZA WE WON'T JUDGE!
+                </div>
+                <div class="icon-pizza">
+                    <img src="/svg/svg-4.svg" alt="">
+                </div>
+            </div>
+            <div class="bg bottom"></div>
         </section>
     </main>
 </template>
@@ -99,10 +152,28 @@ export default {
     .text-combo {
         width: 60%;
 
+
+        li {
+            margin: 10px 0;
+        }
+
+        .price {
+            color: $color-price;
+            font-weight: 600;
+
+        }
+
         .lorem {
             font-size: 0.8rem;
             color: grey;
+
         }
+
+        .list {
+            margin-left: 37px;
+        }
+
+
     }
 
     .combo {
@@ -110,6 +181,44 @@ export default {
         display: flex;
         justify-content: center;
         align-items: center;
+        position: relative;
     }
+
+}
+
+.bg-repeat {
+    height: 380px;
+}
+
+.bg {
+    background-size: 85%;
+    background-image: url("/img/h3-background-img.jpg");
+}
+
+.top {
+    height: 100px;
+    background-position: bottom 0 left 80px;
+}
+
+.middle {
+    height: 180px;
+    background-position: top 0 left 80px;
+    position: relative;
+
+    .text-middle {
+        width: 25%;
+        text-align: left;
+        font-size: 2rem;
+        font-weight: 600;
+        color: $white;
+        position: absolute;
+        top: -5%;
+        left: 20%;
+    }
+}
+
+.bottom {
+    height: 100px;
+    background-position: top 70% left 80px;
 }
 </style>
