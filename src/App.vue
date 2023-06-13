@@ -41,8 +41,9 @@ export default {
           url: "#"
         }
       ]
+
     }
-  }
+  },
 }
 </script>
 
