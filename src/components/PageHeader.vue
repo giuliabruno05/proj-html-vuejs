@@ -59,16 +59,6 @@ header {
         font-size: 0.8rem;
     }
 
-
-
-    .button {
-        margin-right: 10px;
-        padding: 15px;
-        background-color: #d2401e;
-        border: hidden;
-        color: $white;
-    }
-
     ul {
         display: flex;
         gap: 10px;

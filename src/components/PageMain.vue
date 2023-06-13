@@ -268,9 +268,12 @@ export default {
         <!-- sezione pre-order table -->
         <section id="preOrder">
             <div class="form">
-                <input type="text" name="" id="">
+                <input type="text" name="" id="" placeholder="1 person">
+                <span>FOR</span>
                 <input type="date" name="" id="">
-                <input type="datetime" name="" id="">
+                <span>AT</span>
+                <input type="datetime" name="" id="" placeholder="7:00 pm">
+                <button class="button">BOOK A TABLE</button>
             </div>
         </section>
     </main>
@@ -592,6 +595,25 @@ export default {
         text-align: center;
         padding-top: 50px;
         margin: 0 20px;
+
+        input {
+            padding: 10px;
+            margin-right: 30px;
+            height: 40px;
+        }
+
+        span {
+            color: $white;
+            margin-right: 15px;
+            display: inline-block;
+        }
+
+        .button {
+            padding: 12px;
+            width: 165px;
+            font-size: 0.7rem;
+            height: 40px;
+        }
     }
 
 
