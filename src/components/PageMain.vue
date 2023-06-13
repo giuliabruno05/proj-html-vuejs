@@ -89,6 +89,7 @@ export default {
         <section id="special">
             <div class="special-image">
                 <img src="/img/h1-img-4.jpg" alt="">
+                <img class="foto-special" src="/img/h1-img-7n.png" alt="pizza special">
             </div>
             <div class="combo">
                 <div class="text-combo">
@@ -193,13 +194,83 @@ export default {
                 </div>
             </div>
             <div class="container">
-
                 <div class="pizza" v-for="element in pathPizza">
                     <img :src="element.path" alt="">
                     <h4>{{ element.name }}</h4>
                     <span class="sale" v-if="element.sale !== ''">{{ element.sale }}</span>
                     <span class="price">{{ element.price }}</span>
                 </div>
+            </div>
+            <div class="icon-cicle">
+                <img src="/svg/svg-10.svg" alt="icon svg">
+            </div>
+        </section>
+        <!-- sezioni eventi -->
+        <section id="events">
+            <div class="text-event">
+                <div class="date-event">
+                    <ul>
+                        <li>
+                            <h6>MADE WITH LOVE</h6>
+                            <h3>DELISH PIZZA DEALS</h3>
+                        </li>
+                        <li>
+                            <span>
+                                <i class="fa-solid fa-0 fa-xl"></i>
+                                <i class="fa-solid fa-2 fa-xl"></i>
+                            </span><br>
+                            <span>NOV</span>
+                        </li>
+                        <li class="text">
+                            TRADITIONAL NEAOPOLITAN PIES IN KYOTO PIZZA MERCATO
+                        </li>
+                        <li class="event-location">
+                            <i class="fa-solid fa-location-dot"></i>
+                            204 E.piazzetta tommaso
+                        </li>
+                        <li>
+                            <span>
+                                <i class="fa-solid fa-0 fa-xl"></i>
+                                <i class="fa-solid fa-3 fa-xl"></i>
+                            </span><br>
+                            <span>NOV</span>
+                        </li>
+                        <li class="text">
+                            TERRAZZA PATIO DINING SPACE OPENING THIS WEEKEND
+                        </li>
+                        <li class="event-location">
+                            <i class="fa-solid fa-location-dot"></i>
+                            204 E.piazzetta tommaso
+                        </li>
+                        <li>
+                            <span>
+                                <i class="fa-solid fa-0 fa-xl"></i>
+                                <i class="fa-solid fa-5 fa-xl"></i>
+                            </span><br>
+                            <span>NOV</span>
+                        </li>
+                        <li class="text">
+                            SIENNA PRIVATE DINING ROOM WITH STEPHANE BRUNN
+                        </li>
+                        <li class="event-location">
+                            <i class="fa-solid fa-location-dot"></i>
+                            204 E.piazzetta tommaso
+                        </li>
+                    </ul>
+
+                </div>
+                <div class="image-event">
+
+                </div>
+            </div>
+
+        </section>
+        <!-- sezione pre-order table -->
+        <section id="preOrder">
+            <div class="form">
+                <input type="text" name="" id="">
+                <input type="date" name="" id="">
+                <input type="datetime" name="" id="">
             </div>
         </section>
     </main>
@@ -239,6 +310,10 @@ export default {
             font-size: 0.6rem;
         }
     }
+
+    .icon-pizza {
+        background-color: #f7f7f2;
+    }
 }
 
 #special {
@@ -247,6 +322,16 @@ export default {
 
     .special-image {
         width: 50%;
+        position: relative;
+
+        .foto-special {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 35%;
+            transform: translate(-50%, -50%);
+
+        }
     }
 
     .text-combo {
@@ -255,6 +340,8 @@ export default {
 
         li {
             margin: 10px 0;
+
+
         }
 
         .price {
@@ -282,6 +369,10 @@ export default {
         justify-content: center;
         align-items: center;
         position: relative;
+    }
+
+    .icon-pizza {
+        background-color: #f7f7f2;
     }
 
 }
@@ -354,9 +445,17 @@ export default {
 }
 
 #choosePizza {
-    height: 400px;
-    padding: 20px;
+    padding-top: 30px;
+    padding-bottom: 60px;
+    position: relative;
 
+    .icon-cicle img {
+        width: 20px;
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        background-color: #ee2852;
+    }
 
     .text-choosePizza {
         text-align: center;
@@ -364,7 +463,7 @@ export default {
         position: relative;
 
         span {
-            width: 40%;
+            width: 35%;
             margin: 0 auto;
         }
 
@@ -386,33 +485,115 @@ export default {
         }
     }
 
-    .pizza {
-        width: 150px;
-        font-size: 0.7rem;
-        text-align: center;
-        color: $third-color;
-        margin-top: 20px;
-
-        h4 {
-            margin-top: 10px;
-            margin-bottom: 5px;
-        }
-
-        .price {
-            color: $price;
-            font-weight: 600;
-            margin: 0 10px;
-        }
-
-        .sale {
-            text-decoration: line-through;
-        }
-
-    }
-
     .container {
         justify-content: space-between;
 
+        .pizza {
+            width: 150px;
+            font-size: 0.7rem;
+            text-align: center;
+            color: $third-color;
+            margin-top: 20px;
+
+
+
+
+
+            h4 {
+                margin-top: 10px;
+                margin-bottom: 5px;
+            }
+
+            .price {
+                color: $price;
+                font-weight: 600;
+                margin: 0 10px;
+            }
+
+            .sale {
+                text-decoration: line-through;
+            }
+
+        }
     }
+
+}
+
+#events {
+    height: 550px;
+
+
+    .text-event {
+        height: 100%;
+        display: flex;
+
+
+        .date-event {
+            background-image: url("/img/cielostellato.PNG");
+            background-position: bottom;
+            width: 50%;
+            height: 85%;
+            color: $white;
+            padding: 50px;
+
+            h6 {
+                color: $price;
+                font-size: 0.5rem;
+                font-weight: normal;
+                margin-bottom: 5px;
+            }
+
+            h3 {
+                margin-bottom: 20px;
+                font-weight: 400;
+            }
+
+            ul {
+
+
+                li {
+                    margin: 10px 0;
+
+
+                    .text {
+                        margin-left: 30px;
+                    }
+                }
+
+                span i {
+                    color: $price;
+                }
+
+                .event-location {
+                    color: $price;
+                    font-size: 0.7rem;
+                }
+            }
+
+        }
+
+        .image-event {
+            background-image: url("/img/h3-img-5a.jpg");
+            width: 50%;
+            height: 100%;
+            background-size: cover;
+        }
+    }
+}
+
+#preOrder {
+    background-image: url("/img/h3-background-img-3.jpg");
+    height: 200px;
+    background-size: cover;
+    background-position: right;
+    margin: 5px 0;
+
+    .form {
+        text-align: center;
+        padding-top: 50px;
+        margin: 0 20px;
+    }
+
+
 }
 </style>
