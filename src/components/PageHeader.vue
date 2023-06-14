@@ -20,6 +20,9 @@ export default {
             </div>
             <nav>
                 <ul>
+                    <li class="mustache">
+                        <img src="/svg/svg-2.svg" alt="">
+                    </li>
                     <li v-for="link in details">
                         {{ link.text }}
                     </li>
@@ -78,6 +81,13 @@ header {
             width: 80px;
 
         }
+    }
+
+    .mustache {
+        width: 15px;
+        height: 15px;
+        fill: $white;
+
     }
 
     .pay {

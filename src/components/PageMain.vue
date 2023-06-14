@@ -67,11 +67,18 @@ export default {
 
 <template>
     <main>
-        <div class="container">
-            <div class="image" v-for="path in pathImage">
-                <img :src="path" alt="">
+        <section id="sponsor">
+            <div class="container">
+                <div class="image" v-for="path in pathImage">
+                    <img :src="path" alt="">
+                    <div class="image-hover">
+                        <div class="label">
+                            <i class="fa-regular fa-eye"></i>
+                        </div>
+                    </div>
+                </div>
             </div>
-        </div>
+        </section>
         <!-- sezione slogan -->
         <section id="slogan">
             <div class="btn prev">
@@ -205,7 +212,7 @@ export default {
                     <h4>{{ element.name }}</h4>
                     <span class="sale" v-if="element.sale !== ''">{{ element.sale }}</span>
                     <span class="price">{{ element.price }}</span>
-                    <div class="soldOut" v-if="element.soldOut">
+                    <div class="soldOut label" v-if="element.soldOut">
                         SOLD
                     </div>
                 </div>
@@ -218,52 +225,53 @@ export default {
         <section id="events">
             <div class="text-event">
                 <div class="date-event">
+                    <h6>MADE WITH LOVE</h6>
+                    <h3>DELISH PIZZA DEALS</h3>
                     <ul>
-                        <li>
-                            <h6>MADE WITH LOVE</h6>
-                            <h3>DELISH PIZZA DEALS</h3>
+                        <li class="dashed">
+                            <div class="data">
+                                <span class="number">
+                                    02
+                                </span><br>
+                                <span>NOV</span>
+                            </div>
+                            <div class="text">
+                                TRADITIONAL NEAOPOLITAN PIES IN KYOTO PIZZA MERCATO
+                                <div class="event-location">
+                                    <i class="fa-solid fa-location-dot"></i>
+                                    204 E.piazzetta tommaso
+                                </div>
+                            </div>
+                        </li>
+                        <li class="dashed">
+                            <div class="data">
+                                <span class="number">
+                                    03
+                                </span><br>
+                                <span>NOV</span>
+                            </div>
+                            <div class="text">
+                                TERRAZZA PATIO DINING SPACE OPENING THIS WEEKEND
+                                <div class="event-location">
+                                    <i class="fa-solid fa-location-dot"></i>
+                                    204 E.piazzetta tommaso
+                                </div>
+                            </div>
                         </li>
                         <li>
-                            <span>
-                                <i class="fa-solid fa-0 fa-xl"></i>
-                                <i class="fa-solid fa-2 fa-xl"></i>
-                            </span><br>
-                            <span>NOV</span>
-                        </li>
-                        <li class="text">
-                            TRADITIONAL NEAOPOLITAN PIES IN KYOTO PIZZA MERCATO
-                        </li>
-                        <li class="event-location">
-                            <i class="fa-solid fa-location-dot"></i>
-                            204 E.piazzetta tommaso
-                        </li>
-                        <li>
-                            <span>
-                                <i class="fa-solid fa-0 fa-xl"></i>
-                                <i class="fa-solid fa-3 fa-xl"></i>
-                            </span><br>
-                            <span>NOV</span>
-                        </li>
-                        <li class="text">
-                            TERRAZZA PATIO DINING SPACE OPENING THIS WEEKEND
-                        </li>
-                        <li class="event-location">
-                            <i class="fa-solid fa-location-dot"></i>
-                            204 E.piazzetta tommaso
-                        </li>
-                        <li>
-                            <span>
-                                <i class="fa-solid fa-0 fa-xl"></i>
-                                <i class="fa-solid fa-5 fa-xl"></i>
-                            </span><br>
-                            <span>NOV</span>
-                        </li>
-                        <li class="text">
-                            SIENNA PRIVATE DINING ROOM WITH STEPHANE BRUNN
-                        </li>
-                        <li class="event-location">
-                            <i class="fa-solid fa-location-dot"></i>
-                            204 E.piazzetta tommaso
+                            <div class="data">
+                                <span class="number">
+                                    05
+                                </span><br>
+                                <span>NOV</span>
+                            </div>
+                            <div class="text">
+                                SIENNA PRIVATE DINING ROOM WITH STHEPANE BRUNN
+                                <div class="event-location">
+                                    <i class="fa-solid fa-location-dot"></i>
+                                    204 E.piazzetta tommaso
+                                </div>
+                            </div>
                         </li>
                     </ul>
 
@@ -282,7 +290,7 @@ export default {
         <!-- sezione pre-order table -->
         <section id="preOrder">
             <div class="form">
-                <input type="text" name="" id="" placeholder="1 person">
+                <input type="text" name="" id="" placeholder="1 person ">
                 <span>FOR</span>
                 <input type="date" name="" id="">
                 <span>AT</span>
@@ -304,6 +312,43 @@ export default {
     padding-top: 5px;
 
 }
+
+#sponsor {
+    .container {
+        height: 200px;
+
+        .image {
+            width: calc(100% / 4 - 5px);
+            height: 100%;
+
+            &:hover img {
+                display: none;
+            }
+
+            &:hover .image-hover {
+                display: block;
+            }
+        }
+
+        .image-hover {
+            background-image: url("/img/pois.jpg");
+            position: relative;
+            width: 100%;
+            height: 100%;
+            display: none;
+
+            .label {
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+            }
+        }
+
+    }
+
+
+}
+
 
 #slogan {
     height: 300px;
@@ -358,7 +403,7 @@ export default {
 
 
         li {
-            margin: 10px 0;
+            margin: 15px 0;
 
 
         }
@@ -541,15 +586,6 @@ export default {
             }
 
             .soldOut {
-                height: 40px;
-                width: 40px;
-                background-color: $price;
-                color: $white;
-                border-radius: 50%;
-                text-align: center;
-                line-height: 40px;
-                vertical-align: middle;
-                position: absolute;
                 top: 0;
                 right: 0;
             }
@@ -567,14 +603,13 @@ export default {
         height: 100%;
         display: flex;
 
-
         .date-event {
             background-image: url("/img/cielostellato.PNG");
             background-position: bottom;
-            width: 50%;
             height: 85%;
+            width: 50%;
             color: $white;
-            padding: 50px;
+            padding: 60px;
 
             h6 {
                 color: $price;
@@ -588,28 +623,42 @@ export default {
                 font-weight: 400;
             }
 
-            ul {
+            li {
+                margin: 30px 0;
+                display: flex;
+                justify-content: space-between;
+                padding-bottom: 30px;
+                width: 90%;
 
-
-                li {
-                    margin: 10px 0;
-
-
-                    .text {
-                        margin-left: 30px;
-                    }
+                .text {
+                    font-size: 0.9rem;
+                    width: 80%;
                 }
 
-                span i {
+                .number {
+                    font-size: 2rem;
+                    font-weight: 600;
                     color: $price;
-                }
-
-                .event-location {
-                    color: $price;
-                    font-size: 0.7rem;
+                    margin-top: -4px;
+                    display: inline-block;
                 }
             }
 
+            .dashed {
+                border-bottom: 1px dashed $third-color;
+            }
+
+            span i {
+                color: $price;
+                font-size: 2rem;
+                margin: 10px 0;
+            }
+
+            .event-location {
+                color: $price;
+                font-size: 0.6rem;
+                margin: 5px 0;
+            }
         }
 
         .image-event {

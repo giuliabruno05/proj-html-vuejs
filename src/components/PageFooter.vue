@@ -162,7 +162,7 @@ footer {
 
         .creator {
             color: $third-color;
-            font-size: 0.8rem;
+            font-size: 0.6rem;
             position: absolute;
             bottom: 10px;
             left: 30px;
