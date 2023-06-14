@@ -18,21 +18,22 @@ export default {
             <div>
                 <button class="button"> ORDER ONLINE</button>
             </div>
+            <!-- nav header  -->
             <nav>
                 <ul>
                     <li class="mustache">
-                        <img src="/svg/svg-2.svg" alt="">
+                        <img src="/svg/svg-2.svg" alt="img baffi">
                     </li>
                     <li v-for="link in details">
-                        {{ link.text }}
+                        <a :href="link.url">{{ link.text }}</a>
                     </li>
                     <li>
                         <div class="logo">
-                            <img src="/img/h5-logo-divided-header.png" alt="">
+                            <img src="/img/h5-logo-divided-header.png" alt="logo">
                         </div>
                     </li>
                     <li v-for="menu in element">
-                        {{ menu.text }}
+                        <a :href="menu.url">{{ menu.text }}</a>
                     </li>
                 </ul>
 
@@ -40,7 +41,7 @@ export default {
             <div class="shop">
                 <ul>
                     <li class="pay">
-                        <img src="/svg/svg-1.svg" alt="">
+                        <img src="/svg/svg-1.svg" alt="icon scooter">
                         CART
                     </li>
                     <li>

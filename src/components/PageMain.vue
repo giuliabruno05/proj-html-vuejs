@@ -84,10 +84,11 @@ export default {
 
 <template>
     <main>
+        <!-- sezione sponsor -->
         <section id="sponsor">
             <div class="container">
                 <div class="image" v-for="path in pathImage">
-                    <img :src="path" alt="">
+                    <img :src="path" alt="sponsor">
                     <div class="image-hover">
                         <div class="label">
                             <i class="fa-regular fa-eye"></i>
@@ -111,20 +112,20 @@ export default {
                 <span class="post">WASHINGTON POST 2018</span>
             </div>
             <div class="icon-pizza">
-                <img src="/svg/svg-4.svg" alt="">
+                <img src="/svg/svg-4.svg" alt="icon pizza">
             </div>
             <!-- sezione combo special  -->
         </section>
         <!-- sezione combo special -->
         <section id="special">
             <div class="special-image">
-                <img src="/img/h1-img-4.jpg" alt="">
+                <img src="/img/h1-img-4.jpg" alt="foto special">
                 <img class="foto-special" src="/img/h1-img-7n.png" alt="pizza special">
             </div>
             <div class="combo">
                 <div class="text-combo">
                     <h2>SPECIALS *</h2>
-                    <span class="lorem">Lorem ipsum dolor sit amet consectetur adipisicing elit.Praesent ut</span>
+                    <span class="lorem">Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesent ut</span>
                     <ul>
                         <li>
                             <span class="price">
@@ -134,7 +135,7 @@ export default {
                             </span>
                             <strong>COMBO PICCOLO</strong>
                         </li>
-                        <li class="lorem list">Lorem ipsum dolor sit amet consectetur adipisicing elit.Praesent ut aliquam
+                        <li class="lorem list">Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesent ut aliquam
                             dui.
                         </li>
                         <li>
@@ -145,7 +146,7 @@ export default {
                             </span>
                             <strong>COMBO MEZZO</strong>
                         </li>
-                        <li class="lorem list">Lorem ipsum dolor sit amet consectetur adipisicing elit.Praesent ut aliquam
+                        <li class="lorem list">Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesent ut aliquam
                             dui.
                         </li>
                         <li>
@@ -156,14 +157,14 @@ export default {
                             </span>
                             <strong>COMBO GRANDE</strong>
                         </li>
-                        <li class="lorem list">Lorem ipsum dolor sit amet consectetur adipisicing elit.Praesent ut aliquam
+                        <li class="lorem list">Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesent ut aliquam
                             dui.
                         </li>
 
                     </ul>
                 </div>
                 <div class="icon-pizza">
-                    <img src="/svg/svg-4.svg" alt="">
+                    <img src="/svg/svg-4.svg" alt="icon pizza">
                 </div>
             </div>
         </section>
@@ -175,7 +176,7 @@ export default {
                     GO AHEAD AND BUILD YOUR OWN PIZZA WE WON'T JUDGE!
                 </div>
                 <div class="icon-pizza">
-                    <img src="/svg/svg-4.svg" alt="">
+                    <img src="/svg/svg-4.svg" alt="icon pizza">
                 </div>
             </div>
             <div class="bg bottom"></div>
@@ -184,21 +185,23 @@ export default {
         <section id="team">
             <div class="container">
                 <div class="team" v-for="team in imageClient">
-                    <img :src="team.path" alt="">
+                    <img :src="team.path" alt="foto team">
                     <div class="image-hover-team">
                         <div class="contacts">
-                            <h5>{{ team.name }}</h5>
-                            <span>{{ team.role }}</span>
-                            <div class="icon">
-                                <a href="#">
-                                    <i class="fa-brands fa-instagram"></i>
-                                </a>
-                                <a href="#">
-                                    <i class="fa-brands fa-twitter"></i>
-                                </a>
-                                <a href="#">
-                                    <i class="fa-brands fa-facebook-f"></i>
-                                </a>
+                            <div>
+                                <h5>{{ team.name }}</h5>
+                                <span>{{ team.role }}</span>
+                                <div class="icon">
+                                    <a href="#">
+                                        <i class="fa-brands fa-instagram"></i>
+                                    </a>
+                                    <a href="#">
+                                        <i class="fa-brands fa-twitter"></i>
+                                    </a>
+                                    <a href="#">
+                                        <i class="fa-brands fa-facebook-f"></i>
+                                    </a>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -233,16 +236,16 @@ export default {
             <div class="text-choosePizza">
                 <h6>CHOOSE YOUR FLAVOR</h6>
                 <h3>THE BEST PIZZA IN TOWN</h3>
-                <span>Lorem ipsum dolor sit amet consectetur adipisicing elit.Ut blandit arcu in pretium
-                    molestie.Interdum et malesuada fames ac.
+                <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut blandit arcu in pretium molestie.Interdum
+                    et malesuada fames ac.
                 </span>
                 <div class="icon-pizza">
-                    <img src="/svg/svg-4.svg" alt="">
+                    <img src="/svg/svg-4.svg" alt="icon pizza">
                 </div>
             </div>
             <div class="container">
                 <div class="pizza" v-for="element in pathPizza">
-                    <img :src="element.path" alt="">
+                    <img :src="element.path" alt="foto pizza">
                     <h4>{{ element.name }}</h4>
                     <span class="sale" v-if="element.sale !== ''">{{ element.sale }}</span>
                     <span class="price">{{ element.price }}</span>
@@ -312,7 +315,7 @@ export default {
                 </div>
                 <div class="image-event">
                     <div class="icon-pizza">
-                        <img src="/svg/svg-4.svg" alt="">
+                        <img src="/svg/svg-4.svg" alt="icon pizza">
                     </div>
                     <div class="shop">
                         <img src="/svg/svg-9.svg" alt="shop">
@@ -324,15 +327,14 @@ export default {
         <!-- sezione pre-order table -->
         <section id="preOrder">
             <div class="form">
-                <input type="text" name="" id="" placeholder="1 person ">
+                <input type="text" placeholder="1 person ">
                 <span>FOR</span>
-                <input type="date" name="" id="">
+                <input type="date">
                 <span>AT</span>
-                <input type="datetime" name="" id="" placeholder="7:00 pm">
-                <button class="button">BOOK A TABLE</button><br>
+                <input type="datetime" placeholder="7:00 pm">
+                <button class="button">BOOK A TABLE</button>
                 <span class="sponsor">*Powered by open table</span>
             </div>
-
         </section>
     </main>
 </template>
@@ -349,11 +351,11 @@ export default {
 
 #sponsor {
     .container {
-        height: 200px;
+        min-height: 100px;
 
         .image {
             width: calc(100% / 4 - 5px);
-            height: 100%;
+
 
             &:hover img {
                 display: none;
@@ -387,7 +389,9 @@ export default {
 #slogan {
     height: 300px;
     background-image: url("/img/h3-testimonials-bckgrnd.jpg");
-    background-size: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
     text-align: center;
     position: relative;
     display: flex;
@@ -517,9 +521,9 @@ export default {
     .container {
         position: relative;
         gap: 0;
+        min-height: 100px;
 
         .team {
-            height: 300px;
             width: 100%;
 
             &:hover img {
@@ -548,9 +552,11 @@ export default {
                 top: 50%;
                 left: 50%;
                 transform: translate(-50%, -50%);
-                text-align: center;
-                padding-top: 100px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
                 color: $white;
+                text-align: center;
 
                 span {
                     margin: 10px 0;
@@ -771,27 +777,37 @@ export default {
 
 
 
-    input {
-        padding: 10px;
-        margin-right: 30px;
-        height: 40px;
-    }
+    .form {
+        padding: 0 30px;
+        width: 10;
+        position: relative;
 
-    span {
-        color: $white;
-        margin-right: 15px;
-        display: inline-block;
-    }
 
-    .button {
-        padding: 12px;
-        width: 165px;
-        font-size: 0.7rem;
-        height: 40px;
+        input {
+            border: 1px solid black;
+            background-color: #fff;
+            padding: 10px;
+            margin-right: 30px;
+        }
+
+        span {
+            color: $white;
+            margin-right: 15px;
+            display: inline-block;
+        }
+
+        .button {
+            padding: 12px;
+            font-size: 0.7rem;
+            min-width: 162px;
+        }
     }
 
     .sponsor {
         font-size: 0.6rem;
+        position: absolute;
+        bottom: -15px;
+        left: 30px;
     }
 
 

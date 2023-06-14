@@ -62,16 +62,16 @@ export default {
                         <li><strong>SUNDAY</strong></li>
                         <li>9:00- 22:00</li>
                         <li><strong>FOLLOW US: </strong>
-                            <a href="">
+                            <a href="#">
                                 <i class="fa-brands fa-twitter"></i>
                             </a>
-                            <a href="">
+                            <a href="#">
                                 <i class="fa-brands fa-facebook-f"></i>
                             </a>
-                            <a href="">
+                            <a href="#">
                                 <i class="fa-brands fa-instagram"></i>
                             </a>
-                            <a href="">
+                            <a href="#">
                                 <i class="fa-brands fa-linkedin-in"></i>
                             </a>
                         </li>

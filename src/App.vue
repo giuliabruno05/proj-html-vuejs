@@ -22,21 +22,21 @@ export default {
         },
         {
           text: "MENU",
-          url: "#"
+          url: "#special"
         },
       ],
       menu: [
         {
           text: "EVENT",
-          url: "#"
+          url: "#events"
         },
         {
           text: "BLOG",
-          url: "#"
+          url: "#team"
         },
         {
           text: "LANDING",
-          url: "#"
+          url: "#preOrder"
         }
       ]
 

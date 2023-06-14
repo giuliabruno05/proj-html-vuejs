@@ -6,7 +6,7 @@ export default {
 <template>
     <div class="slider">
         <div class="image-slider">
-            <img src="/img/h3-rev-img-6.png" alt="">
+            <img src="/img/h3-rev-img-6.png" alt="img prodotto slider">
         </div>
     </div>
     <div class="btn prev">
