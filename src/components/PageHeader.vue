@@ -71,12 +71,19 @@ header {
         padding: 10px;
         height: 80px;
         font-size: 0.7rem;
+
+
     }
 
     ul {
         display: flex;
         gap: 15px;
         align-items: center;
+
+        li:hover {
+            cursor: pointer;
+            transform: scale(1.2);
+        }
 
         .logo {
             width: 80px;
