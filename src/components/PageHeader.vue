@@ -6,7 +6,8 @@ export default {
         AppSlider,
     },
     props: {
-        details: Array
+        details: Array,
+        element: Array
     }
 }
 </script>
@@ -22,7 +23,16 @@ export default {
                     <li v-for="link in details">
                         {{ link.text }}
                     </li>
+                    <li>
+                        <div class="logo">
+                            <img src="/img/h5-logo-divided-header.png" alt="">
+                        </div>
+                    </li>
+                    <li v-for="menu in element">
+                        {{ menu.text }}
+                    </li>
                 </ul>
+
             </nav>
             <div class="shop">
                 <ul>
@@ -66,6 +76,7 @@ header {
 
         .logo {
             width: 80px;
+
         }
     }
 

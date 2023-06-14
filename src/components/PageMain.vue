@@ -20,36 +20,42 @@ export default {
                     path: "/img/h3-product-img-1a-100x100.png",
                     name: "BISMARCK",
                     sale: "$35.00",
-                    price: "$30.00"
+                    price: "$30.00",
+                    soldOut: false
                 },
                 {
                     path: "/img/h3-product-img-2a-150x150.png",
                     name: "FIORI DI ZUCCA",
                     sale: "",
-                    price: " $7.00 - $50.00"
+                    price: " $7.00 - $50.00",
+                    soldOut: false
                 },
                 {
                     path: "/img/h3-product-img-3a-150x150.png",
                     name: "VALDOSTANA",
                     sale: "",
-                    price: "$55.00"
+                    price: "$55.00",
+                    soldOut: true
                 },
                 {
                     path: "/img/h3-product-img-4a-150x150.png",
                     name: "PIZZA TARTUFATA",
                     sale: "",
-                    price: "$45.00"
+                    price: "$45.00",
+                    soldOut: false
                 }, {
                     path: "/img/h3-product-img-5a-150x150.png",
                     name: "FRANCESCANA",
                     sale: "",
-                    price: "$25.00"
+                    price: "$25.00",
+                    soldOut: false
                 },
                 {
                     path: "/img/h3-product-img-6a-100x100.png",
                     name: "CAMPAGNOLA",
                     sale: "",
-                    price: "$50.00 - $95.00"
+                    price: "$50.00 - $95.00",
+                    soldOut: false
                 }
 
 
@@ -199,6 +205,9 @@ export default {
                     <h4>{{ element.name }}</h4>
                     <span class="sale" v-if="element.sale !== ''">{{ element.sale }}</span>
                     <span class="price">{{ element.price }}</span>
+                    <div class="soldOut" v-if="element.soldOut">
+                        SOLD
+                    </div>
                 </div>
             </div>
             <div class="icon-cicle">
@@ -260,7 +269,12 @@ export default {
 
                 </div>
                 <div class="image-event">
-
+                    <div class="icon-pizza">
+                        <img src="/svg/svg-4.svg" alt="">
+                    </div>
+                    <div class="shop">
+                        <img src="/svg/svg-9.svg" alt="shop">
+                    </div>
                 </div>
             </div>
 
@@ -273,8 +287,10 @@ export default {
                 <input type="date" name="" id="">
                 <span>AT</span>
                 <input type="datetime" name="" id="" placeholder="7:00 pm">
-                <button class="button">BOOK A TABLE</button>
+                <button class="button">BOOK A TABLE</button><br>
+                <span class="sponsor">*Powered by open table</span>
             </div>
+
         </section>
     </main>
 </template>
@@ -452,12 +468,22 @@ export default {
     padding-bottom: 60px;
     position: relative;
 
-    .icon-cicle img {
+    .icon-cicle {
+
+        background-color: #ee2852;
         width: 20px;
         position: absolute;
         bottom: 0;
         right: 0;
-        background-color: #ee2852;
+        height: 20px;
+        text-align: center;
+
+        img {
+            width: 10px;
+            height: 15px;
+            margin-top: 3px;
+        }
+
     }
 
     .text-choosePizza {
@@ -497,10 +523,7 @@ export default {
             text-align: center;
             color: $third-color;
             margin-top: 20px;
-
-
-
-
+            position: relative;
 
             h4 {
                 margin-top: 10px;
@@ -515,6 +538,20 @@ export default {
 
             .sale {
                 text-decoration: line-through;
+            }
+
+            .soldOut {
+                height: 40px;
+                width: 40px;
+                background-color: $price;
+                color: $white;
+                border-radius: 50%;
+                text-align: center;
+                line-height: 40px;
+                vertical-align: middle;
+                position: absolute;
+                top: 0;
+                right: 0;
             }
 
         }
@@ -580,6 +617,24 @@ export default {
             width: 50%;
             height: 100%;
             background-size: cover;
+            position: relative;
+
+            .shop {
+                width: 20px;
+                background-color: #fff;
+                position: absolute;
+                top: 0;
+                right: 0;
+                height: 20px;
+                text-align: center;
+
+                img {
+                    width: 10px;
+                    height: 15px;
+                    margin-top: 3px;
+                }
+
+            }
         }
     }
 }
@@ -590,30 +645,33 @@ export default {
     background-size: cover;
     background-position: right;
     margin: 5px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
-    .form {
-        text-align: center;
-        padding-top: 50px;
-        margin: 0 20px;
 
-        input {
-            padding: 10px;
-            margin-right: 30px;
-            height: 40px;
-        }
 
-        span {
-            color: $white;
-            margin-right: 15px;
-            display: inline-block;
-        }
+    input {
+        padding: 10px;
+        margin-right: 30px;
+        height: 40px;
+    }
 
-        .button {
-            padding: 12px;
-            width: 165px;
-            font-size: 0.7rem;
-            height: 40px;
-        }
+    span {
+        color: $white;
+        margin-right: 15px;
+        display: inline-block;
+    }
+
+    .button {
+        padding: 12px;
+        width: 165px;
+        font-size: 0.7rem;
+        height: 40px;
+    }
+
+    .sponsor {
+        font-size: 0.6rem;
     }
 
 

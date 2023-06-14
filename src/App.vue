@@ -24,10 +24,8 @@ export default {
           text: "MENU",
           url: "#"
         },
-        {
-          text: "/img/h5-logo-divided-header.png",
-          url: "#"
-        },
+      ],
+      menu: [
         {
           text: "EVENT",
           url: "#"
@@ -48,7 +46,7 @@ export default {
 </script>
 
 <template>
-  <PageHeader :details="links" />
+  <PageHeader :details="links" :element="menu" />
   <PageMain />
   <PageFooter />
 </template>
