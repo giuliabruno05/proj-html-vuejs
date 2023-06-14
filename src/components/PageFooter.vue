@@ -128,12 +128,7 @@ footer {
                 font-size: 0.6rem;
                 font-weight: 300;
 
-                a {
-                    color: $white;
-                    padding: 3px;
-                    display: inline-block;
-                    font-size: 0.6rem;
-                }
+
             }
 
             .closed {

@@ -69,12 +69,12 @@ header {
         align-items: center;
         padding: 10px;
         height: 80px;
-        font-size: 0.8rem;
+        font-size: 0.7rem;
     }
 
     ul {
         display: flex;
-        gap: 10px;
+        gap: 15px;
         align-items: center;
 
         .logo {

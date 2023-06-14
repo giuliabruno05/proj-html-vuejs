@@ -10,10 +10,27 @@ export default {
                 "/img/h3-img-4.jpg"
             ],
             imageClient: [
-                "/img/h1-team-1a-700x700.jpg",
-                "/img/h1-team-2a.jpg",
-                "/img/h1-team-4a.jpg",
-                "/img/h1-team-3a.jpg"
+                {
+                    path: "/img/h1-team-1a-700x700.jpg",
+                    name: "JHONNY FRANKLIN",
+                    role: "Chef"
+                },
+                {
+                    path: "/img/h1-team-2a.jpg",
+                    name: "ABBY FRANKLIN",
+                    role: "Kitchen Porter"
+                },
+                {
+                    path: "/img/h1-team-4a.jpg",
+                    name: "LEWIS FRANKLIN",
+                    role: "Sous Chef"
+                },
+                {
+                    path: "/img/h1-team-3a.jpg",
+                    name: "JULIE FRANKLIN",
+                    role: "Manager"
+                },
+
             ],
             pathPizza: [
                 {
@@ -166,8 +183,25 @@ export default {
         <!-- sezione team -->
         <section id="team">
             <div class="container">
-                <div class="team" v-for="path in imageClient">
-                    <img :src="path" alt="">
+                <div class="team" v-for="team in imageClient">
+                    <img :src="team.path" alt="">
+                    <div class="image-hover-team">
+                        <div class="contacts">
+                            <h5>{{ team.name }}</h5>
+                            <span>{{ team.role }}</span>
+                            <div class="icon">
+                                <a href="#">
+                                    <i class="fa-brands fa-instagram"></i>
+                                </a>
+                                <a href="#">
+                                    <i class="fa-brands fa-twitter"></i>
+                                </a>
+                                <a href="#">
+                                    <i class="fa-brands fa-facebook-f"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
                 <div class="icon-pizza">
                     <img src="/svg/svg-4.svg" alt="">
@@ -488,6 +522,43 @@ export default {
             height: 300px;
             width: 100%;
 
+            &:hover img {
+                display: none;
+            }
+
+            &:hover .image-hover-team {
+                display: block;
+            }
+        }
+
+        .image-hover-team {
+            background-image: url("/img/pois.jpg");
+            width: 100%;
+            height: 100%;
+            position: relative;
+            display: none;
+
+
+
+            .contacts {
+                width: 90%;
+                height: 90%;
+                background-color: $price;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                text-align: center;
+                padding-top: 100px;
+                color: $white;
+
+                span {
+                    margin: 10px 0;
+                    display: inline-block;
+                    font-size: 0.7rem;
+                }
+
+            }
         }
     }
 }
