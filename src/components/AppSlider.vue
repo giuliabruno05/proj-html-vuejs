@@ -31,7 +31,7 @@ export default {
 
 
     .image-slider {
-        width: 25%;
+        width: 20%;
     }
 
 

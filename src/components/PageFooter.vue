@@ -81,7 +81,7 @@ export default {
                     <h5>THE DON PEPPE CREW FIRST AND FOREMOST VALUES AN AUTHENTIC, WELL BAKED SLICE OF PIZZA.</h5>
                 </div>
             </div>
-            <span class="creator">Created with &hearts; <a href="">by Qode interactive</a></span>
+            <span class="creator">Created with &hearts; <a href="">by Giulia Bruno</a></span>
         </div>
         <div class="footer-img">
             <div class="icon-pizza">
